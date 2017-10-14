@@ -13,17 +13,18 @@ namespace AGstudios.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Portfolio()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult WebDesign()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        public ActionResult GraphicDesign()
+        {
             return View();
         }
     }

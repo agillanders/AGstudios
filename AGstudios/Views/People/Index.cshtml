@@ -1,0 +1,90 @@
+﻿@model IEnumerable<AGstudios.Models.Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="d-row voffset4">
+    <div class="d-column">
+        <div class="container">
+            <div>
+                <h2>Friends & Family</h2>
+                <a class="btn btn-primary" href="@Url.Action("Create", "People")">Create New</a>
+            </div>
+            <div class="table table-responsive voffset2">
+                <table class="table table-condensed details-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FirstName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Surname)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PhoneNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.HouseNameNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.StreetName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Town)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.County)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PostCode)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Surname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HouseNameNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.StreetName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Town)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.County)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PostCode)
+                            </td>
+                            <td>
+                                <a class="btn btn-primary btn-xs" href="@Url.Action("Edit", "People", new { id = item.PersonID })"><i class="glyphicon glyphicon-edit"></i></a>
+                                <a class="btn btn-info btn-xs" href="@Url.Action("Details", "People", new { id = item.PersonID })"><i class="glyphicon glyphicon-th-list"></i></a>
+                                <a class="btn btn-danger btn-xs" href="@Url.Action("Delete", "People", new { id = item.PersonID })"><i class="glyphicon glyphicon-remove"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

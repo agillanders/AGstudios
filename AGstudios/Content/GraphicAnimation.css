@@ -1,0 +1,284 @@
+﻿.graphic:nth-of-type(1) {
+    position: absolute;
+    left: 0;
+    animation-name: graphic1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic1 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(2) {
+    position: absolute;
+    left: 30px;
+    animation-name: graphic2;
+    animation-duration: 2s;
+    animation-delay: .4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic2 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 30px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(3) {
+    position: absolute;
+    left: 55px;
+    animation-name: graphic3;
+    animation-duration: 2s;
+    animation-delay: .6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic3 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 55px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(4) {
+    position: absolute;
+    left: 85px;
+    animation-name: graphic4;
+    animation-duration: 2s;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic4 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 85px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(5) {
+    position: absolute;
+    left: 110px;
+    animation-name: graphic5;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic5 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 110px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(6) {
+    position: absolute;
+    left: 140px;
+    animation-name: graphic6;
+    animation-duration: 2s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic6 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 140px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(7) {
+    position: absolute;
+    left: 165px;
+    animation-name: graphic7;
+    animation-duration: 2s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic7 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 165px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(8) {
+    position: absolute;
+    left: 210px;
+    animation-name: graphic8;
+    animation-duration: 2s;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic8 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 210px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(9) {
+    position: absolute;
+    left: 235px;
+    animation-name: graphic9;
+    animation-duration: 2s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic9 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 235px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(10) {
+    position: absolute;
+    left: 260px;
+    animation-name: graphic10;
+    animation-duration: 2s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic10 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 260px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(11) {
+    position: absolute;
+    left: 290px;
+    animation-name: graphic11;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic11 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 290px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(12) {
+    position: absolute;
+    left: 315px;
+    animation-name: graphic12;
+    animation-duration: 2s;
+    animation-delay: 2.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic12 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 315px;
+        opacity: 1;
+    }
+}
+
+.graphic:nth-of-type(13) {
+    position: absolute;
+    left: 340px;
+    animation-name: graphic13;
+    animation-duration: 2s;
+    animation-delay: 2.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes graphic13 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 340px;
+        opacity: 1;
+    }
+}

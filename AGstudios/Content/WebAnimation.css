@@ -1,0 +1,196 @@
+﻿.web:nth-of-type(1) {
+    position: absolute;
+    left: 0px;
+    animation-name: web1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web1 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(2) {
+    position: absolute;
+    left: 35px;
+    animation-name: web2;
+    animation-duration: 2s;
+    animation-delay: .4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web2 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 35px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(3) {
+    position: absolute;
+    left: 60px;
+    animation-name: web3;
+    animation-duration: 2s;
+    animation-delay: .6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web3 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 60px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(4) {
+    position: absolute;
+    left: 100px;
+    animation-name: web4;
+    animation-duration: 2s;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web4 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(5) {
+    position: absolute;
+    left: 125px;
+    animation-name: web5;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web5 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 125px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(6) {
+    position: absolute;
+    left: 145px;
+    animation-name: web6;
+    animation-duration: 2s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web6 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 145px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(7) {
+    position: absolute;
+    left: 175px;
+    animation-name: web7;
+    animation-duration: 2s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web7 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 175px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(8) {
+    position: absolute;
+    left: 200px;
+    animation-name: web8;
+    animation-duration: 2s;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web8 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 200px;
+        opacity: 1;
+    }
+}
+
+.web:nth-of-type(9) {
+    position: absolute;
+    left: 225px;
+    animation-name: web9;
+    animation-duration: 2s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes web9 {
+    0% {
+        left: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 225px;
+        opacity: 1;
+    }
+}

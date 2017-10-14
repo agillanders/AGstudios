@@ -1,8 +1,10 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 100px;
 }
 
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -22,3 +24,365 @@ select,
 textarea {
     max-width: 280px;
 }
+
+a {
+    color: grey;
+}
+
+.d-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 5px;
+    height: 100%;
+}
+
+.d-row {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.d-column {
+    flex: 1 1 0;
+    max-width: 100%;
+}
+
+.d-column-2 {
+    flex: 2 1 0;
+    max-width: 100%;
+}
+
+.details-table thead {
+    background-color: #337ab7;
+    color: white;
+}
+
+.details-table tbody tr:nth-of-type(odd) {
+    background-color: #eaf1f7;
+}
+
+.details-table tbody tr:nth-of-type(even) {
+    background-color: #fff;
+}
+
+.voffset {
+    margin-top: 10px;
+}
+
+.voffset2 {
+    margin-top: 20px;
+}
+
+.voffset3 {
+    margin-top: 30px;
+}
+
+.voffset4 {
+    margin-top: 40px;
+}
+
+.loffset2 {
+    margin-left: 22px;
+}
+
+.title-animation * {
+    display: inline-block;
+    font-family: 'Gochi Hand', cursive;
+}
+
+.title-bg {
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    height: 80px;
+}
+
+.pagetitle {
+    margin: auto;
+    padding: 5px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+/***************************************************    nav bar   ******************************************/
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #222;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar-inverse {
+    background-color: #222;
+    border-color: #222;
+}
+
+.navbar {
+    margin-bottom: 0;
+    width: 80%;
+    margin: auto;
+}
+
+/***************************************************    home page   ******************************************/
+.container .jumbotron {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.logo-bg {
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    height: 180px;
+    margin-top: 50px;
+}
+
+.logo {
+    margin: auto;
+    padding: 5px;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-header h1 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .logo,
+    .logo-bg {
+        display: none;
+    }
+}
+
+.info-panel {
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 60px;
+    background-color: #3e76bd;
+    color: #fff;
+}
+
+    .info-panel svg {
+        margin: 0;
+        margin-top: 10px;
+        padding: 0;
+        width: 50px;
+        float: left;
+    }
+
+        .info-panel svg:hover {
+            opacity: .6;
+        }
+
+    .info-panel a,
+    .info-panel h2 {
+        display: inline-block;
+    }
+
+    .info-panel a {
+        height: 50px;
+    }
+
+.jumbotron {
+    background-image: url("../Images/Jumbotron.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 260px;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.welcome-text {
+    margin-top: 30px;
+}
+
+
+
+/***************************************************    Portfolio page   ******************************************/
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.lg-art img,
+.art img {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.art {
+    max-width: 200px;
+}
+
+.letter {
+    color: #cc0000;
+}
+
+/***************************************************    Web page   ******************************************/
+.pad {
+    padding-top: 15px;
+}
+
+
+.tab-panel {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #749995;
+    border-radius: 4px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.inactive {
+    display: none;
+}
+
+.web {
+    color: #008000;
+}
+
+.tab-panel img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.mystaff img {
+    margin-bottom: 10px;
+}
+
+.panel-heading a {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+panel-heading h4 a:hover {
+    text-decoration: none;
+    color: #004c00;
+}
+
+#video1 {
+    border: 10px solid #e5f2e5;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        width: 700px;
+    }
+}
+/***************************************************    Graphic page   ******************************************/
+.graphic {
+    color: #E59314;
+}
+
+.graphicpanel {
+    margin-top: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #E59314;
+    width: 100%;
+    height: 250px;
+}
+
+    .graphicpanel img {
+        display: block;
+        width: 60%;
+        margin: auto;
+        margin-top: 30px;
+        border-radius: 4px;
+    }
+
+    .graphicpanel p {
+        margin-top: 30px;
+    }
+
+    .graphicpanel h2 {
+        text-align: center;
+    }
+
+.mystaff-logo img {
+    margin-top: -10px;
+}
+/***************************************************    footer partial   ******************************************/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    margin-top: 50px;
+    width: 100%;
+    color: #999;
+}
+
+.bg-black {
+    background-color: #222;
+}
+
+/***************************************************    RSVP page   ******************************************/
+
+.rsvp-box {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    margin: 0;
+    background-color: #eaf1f7;
+    background: url("../Images/Exeter.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #b3cce2;
+    text-align: center;
+}
+
+    .rsvp-box h1 {
+        margin-top: 100px;
+        color: #fff;
+        font-size: 5.5em;
+        font-family: 'Gochi Hand', cursive;
+    }
+
+.rsvp-display {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    padding: 10px;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid #b3cce2;
+    border-left: 1px solid #b3cce2;
+    border-right: 1px solid #b3cce2;
+}
+
+.search {
+    width: 300px;
+    height: 100%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: -25px;
+    padding: 0;
+}
+
+    .search .input-group {
+        border-radius: 5px;
+        border: 5px solid #fff;
+    }

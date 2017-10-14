@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "Web Design";
+}
+
+<div class="d-row">
+    <div class="d-column title-bg">
+        <div class="container">
+            <div class="pagetitle">
+                <div class="title-animation">
+                    <h2 class="web">W</h2>
+                    <h2 class="web">E</h2>
+                    <h2 class="web">B</h2>
+                    <h2 class="web">D</h2>
+                    <h2 class="web">E</h2>
+                    <h2 class="web">S</h2>
+                    <h2 class="web">I</h2>
+                    <h2 class="web">G</h2>
+                    <h2 class="web">N</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-row">
+    <div class="d-column">
+        <div class="container pad">
+            <a class="btn btn-success webbuttons active" href="##" id="1">Alec Gillanders</a>
+            <a class="btn btn-success webbuttons" href="##" id="2">Artists</a>
+            <a class="btn btn-success webbuttons" href="##" id="3">My Staff File</a>
+            <a class="btn btn-success webbuttons" href="##" id="4">Bridge</a>
+
+            <div class="voffset3">
+                @*  Alec Gillanders  *@
+                <div class="tab-panel webpanel" id="1">
+                    <div class="col-sm-4">
+                        <h4 class="text-muted">Desktop</h4>
+                        <img src="~/Images/ag2.jpg" alt="alec gillanders web site" />
+                    </div>
+                    <div class="col-sm-2">
+                        <h4 class="text-muted loffset2">Moblie</h4>
+                        <img src="~/Images/ag2m.jpg" alt="alec gillanders mobile web site" />
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <h4 class="text-muted loffset2">Basic responsive web page</h4>
+                        <p class="voffset3">place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                    </div>
+                </div>
+                @*  Artists  *@
+                <div class="tab-panel webpanel inactive" id="2">
+                    <div class="col-sm-3">
+                        <img src="~/Images/Artists.jpg" alt="digital artist web site" />
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="~/Images/Artists1.jpg" alt="digital artist web site" />
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <h4 class="text-muted loffset2">Single page website</h4>
+                        <p class="voffset3">place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                    </div>
+                </div>
+                @*  My Staff File  *@
+                <div class="tab-panel webpanel inactive" id="3">
+                    <div class="col-sm-7 mystaff">
+                        @Html.Partial("_MyStaffFileAccordian")
+                    </div>
+
+
+                    <div class="col-sm-5 text-center">
+                        <h4 class="text-muted loffset2">My Staff File</h4>
+                        <p class="voffset3">place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                    </div>
+                </div>
+                @*  Bridge  *@
+                <div class="tab-panel webpanel inactive" id="4">
+                    <div class="col-sm-7">
+                        @Html.Partial("_BridgeAccordian")
+                    </div>
+                    <div class="col-sm-5">
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <p>place holder text here.place holder text here.place holder text here.place holder text here.place holder text here.</p>
+                        <a class="btn btn-success" data-toggle="modal" data-target="#BridgeVideo">Promotional Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="BridgeVideo" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-info">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Bridge Promotion Video</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align:center">
+                    <button class="btn btn-success" onclick="playPause()">Play/Pause</button>
+                    <button class="btn btn-success" onclick="makeSmall()">Small</button>
+                    <button class="btn btn-success" onclick="makeNormal()">Normal</button>
+                    <button class="btn btn-success" onclick="makeBig()">Big</button>
+                    <br><br>
+                    <video id="video1" width="450">
+                        <source src="~/Videos/Devon_Partnership.mov" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@section Scripts {
+    <script>
+        $(function () {
+            $(".webbuttons").click(function () {
+                //alert('#' + this.id + '.webpanel');
+                var tableObjectName = '#' + this.id + '.webpanel';
+                var btnObjectName = '#' + this.id + '.webbuttons';
+
+                $(".webpanel").addClass("inactive");
+                $(tableObjectName).removeClass("inactive");
+                $(".webbuttons").removeClass("active");
+                $(btnObjectName).addClass("active");
+            });
+        });
+    </script>
+
+    <script>
+        var myVideo = document.getElementById("video1");
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function makeBig() {
+            myVideo.width = 600;
+        }
+
+        function makeSmall() {
+            myVideo.width = 300;
+        }
+
+        function makeNormal() {
+            myVideo.width = 450;
+        }
+    </script>
+}

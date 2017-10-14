@@ -1,0 +1,104 @@
+﻿
+.studios,
+.letter-a,
+.pen {
+    position: absolute;
+    right: 200px;
+    top: 20px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+
+.pen {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {
+        right: 0;
+        opacity: 0;
+    }
+
+    100% {
+        right: 200px;
+        opacity: 1;
+    }
+}
+
+.letter-a {
+    animation-name: top;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes top {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+
+    80% {
+        top: 25px;
+        opacity: 1;
+    }
+
+    90% {
+        top: 15px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+.studios {
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.line {
+    position: absolute;
+    right: -60px;
+    top: 20px;
+    z-index: 80;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    opacity: 0;
+}
+
+.line {
+    animation-name: slide-two;
+    animation-duration: 2.9s;
+}
+
+@keyframes slide-two {
+    0% {
+        right: -300px;
+        opacity: 0;
+    }
+
+    100% {
+        right: -60px;
+        opacity: 1;
+    }
+}

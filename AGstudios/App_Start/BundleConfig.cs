@@ -25,7 +25,11 @@ namespace AGstudios
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/logoAnimation.css",
+                      "~/Content/PortfolioAnimation.css",
+                      "~/Content/WebAnimation.css",
+                      "~/Content/GraphicAnimation.css"));
         }
     }
 }

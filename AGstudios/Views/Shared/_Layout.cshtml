@@ -25,9 +25,18 @@
                     <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
                     <li>@Html.ActionLink("WebDesign", "WebDesign", "Home")</li>
                     <li>@Html.ActionLink("GraphicDesign", "GraphicDesign", "Home")</li>
-                    <li>@Html.ActionLink("RSVP", "Index", "Rsvp")</li>
-                    <li>@Html.ActionLink("Roles", "Index", "Role")</li>
-                    <li>@Html.ActionLink("People", "Index", "People")</li>
+
+                    @if (User.IsInRole("User") || User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("RSVP", "Index", "Rsvp")</li>
+                    }
+                    
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Roles", "Index", "Role")</li>
+                        <li>@Html.ActionLink("People", "Index", "People")</li>
+                    }
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

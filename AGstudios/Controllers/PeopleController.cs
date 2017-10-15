@@ -15,6 +15,7 @@ namespace AGstudios.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: People
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View(db.People.ToList());

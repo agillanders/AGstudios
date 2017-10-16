@@ -22,6 +22,7 @@ namespace AGstudios.Controllers
         }
 
         // GET: People/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +38,7 @@ namespace AGstudios.Controllers
         }
 
         // GET: People/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +49,7 @@ namespace AGstudios.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "PersonID,FirstName,Surname,Email,PhoneNumber,HouseNameNumber,StreetName,Town,County,PostCode")] Person person)
         {
             if (ModelState.IsValid)
@@ -60,6 +63,7 @@ namespace AGstudios.Controllers
         }
 
         // GET: People/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +83,7 @@ namespace AGstudios.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "PersonID,FirstName,Surname,Email,PhoneNumber,HouseNameNumber,StreetName,Town,County,PostCode")] Person person)
         {
             if (ModelState.IsValid)
@@ -91,6 +96,7 @@ namespace AGstudios.Controllers
         }
 
         // GET: People/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,6 +114,7 @@ namespace AGstudios.Controllers
         // POST: People/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Person person = db.People.Find(id);

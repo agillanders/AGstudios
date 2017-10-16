@@ -44,12 +44,14 @@ namespace AGstudios.Controllers
             return View(list);
         }
 
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Create(RoleViewModel model)
         {
             var role = new ApplicationRole() { Name = model.Name };
@@ -57,6 +59,7 @@ namespace AGstudios.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Edit(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
@@ -64,6 +67,7 @@ namespace AGstudios.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Edit(RoleViewModel model)
         {
             var role = new ApplicationRole() { Id = model.Id, Name = model.Name };
@@ -71,12 +75,14 @@ namespace AGstudios.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Details(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
             return View(new RoleViewModel(role));
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);
@@ -84,6 +90,7 @@ namespace AGstudios.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteConfirmed(string id)
         {
             var role = await RoleManager.FindByIdAsync(id);

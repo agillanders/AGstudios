@@ -4,30 +4,39 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
+<div class="d-row voffset5">
+    <div class="d-column voffset5">
+        <div class="container">
+            <div class="col-sm-offset-3 col-sm-6">
+                <a class="btn btn-primary" href="@Url.Action("Create", "Role")">Create New</a>
+                <div class="table table-responsive voffset2">
+                    <table class="table table table-condensed details-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary btn-xs" href="@Url.Action("Edit", "Role", new { id = item.Id })"><i class="glyphicon glyphicon-edit"></i></a>
+                                    <a class="btn btn-info btn-xs" href="@Url.Action("Details", "Role", new { id = item.Id })"><i class="glyphicon glyphicon-th-list"></i></a>
+                                    <a class="btn btn-danger btn-xs" href="@Url.Action("Delete", "Role", new { id = item.Id })"><i class="glyphicon glyphicon-remove"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

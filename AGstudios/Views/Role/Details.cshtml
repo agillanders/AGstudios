@@ -4,23 +4,24 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="d-row voffset5">
+    <div class="d-column voffset5">
+        <div class="container">
+            <div>
+                <h4>Details of Role</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
 
-<div>
-    <h4>RoleViewModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-    </dl>
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                </dl>
+            </div>
+            <a class="btn btn-primary" href="@Url.Action("Edit", "Role", new { id = Model.Id })">Edit</a>
+            <a class="btn btn-default" href="@Url.Action("Index", "Role")">Cancel</a>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

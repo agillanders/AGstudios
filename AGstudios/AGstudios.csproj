@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DatabaseConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -202,16 +203,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710141337290_role.cs" />
-    <Compile Include="Migrations\201710141337290_role.Designer.cs">
-      <DependentUpon>201710141337290_role.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710141934112_people.cs" />
-    <Compile Include="Migrations\201710141934112_people.Designer.cs">
-      <DependentUpon>201710141934112_people.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AGstudiosInitializer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
@@ -233,6 +227,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\Admin.JPG" />
+    <Content Include="Images\ag-logo.png" />
     <Content Include="Images\ag-logo.svg" />
     <Content Include="Images\ag.jpg" />
     <Content Include="Images\ag2.jpg" />
@@ -243,6 +238,7 @@
     <Content Include="Images\Bridge.JPG" />
     <Content Include="Images\Dog.png" />
     <Content Include="Images\Exeter.jpg" />
+    <Content Include="Images\forest.jpg" />
     <Content Include="Images\Home.JPG" />
     <Content Include="Images\HrDashboard.JPG" />
     <Content Include="Images\InformaticsHubLogo.JPG" />
@@ -258,6 +254,7 @@
     <Content Include="Images\Rony.png" />
     <Content Include="Images\Sketch.jpg" />
     <Content Include="Images\Sky.png" />
+    <Content Include="Images\trees.png" />
     <Content Include="Images\TwoMen.jpg" />
     <Content Include="Images\Women.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -353,14 +350,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710141337290_role.resx">
-      <DependentUpon>201710141337290_role.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710141934112_people.resx">
-      <DependentUpon>201710141934112_people.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

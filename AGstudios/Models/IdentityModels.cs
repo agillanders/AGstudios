@@ -42,6 +42,6 @@ namespace AGstudios.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<AGstudios.Models.Person> People { get; set; }
+        public DbSet<Person> People { get; set; }
     }
 }

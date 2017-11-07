@@ -8,14 +8,17 @@
         <div class="container voffset4">
             <div class="rsvp-box">
                 <h1>RSVP</h1>
-                <div class="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-ok"></i></button>
-                        </span>
-                    </div><!-- /input-group -->
-                </div>
+                @if (User.IsInRole("Admin"))
+                {
+                    <div class="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-ok"></i></button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div>
+                }
             </div>
             <div class="rsvp-display">
 

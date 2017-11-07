@@ -12,20 +12,23 @@ namespace AGstudios.Models
     {
         public int PersonID { get; set; }
 
-        [DisplayName("First Name")]
+        [DisplayName("Name")]
         public string FirstName { get; set; }
 
         public string Surname { get; set; }
 
+        [DisplayName("User")]
+        public string User { get; set; }
+
         public string Email { get; set; }
 
-        [DisplayName("Phone Number")]
+        [DisplayName("Phone")]
         public int PhoneNumber { get; set; }
 
-        [DisplayName("House Name|Number")]
+        [DisplayName("Name|No.")]
         public string HouseNameNumber { get; set; }
 
-        [DisplayName("Street Name")]
+        [DisplayName("Street")]
         public string StreetName { get; set; }
 
         public string Town { get; set; }

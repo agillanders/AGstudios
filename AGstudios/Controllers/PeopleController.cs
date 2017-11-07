@@ -50,7 +50,7 @@ namespace AGstudios.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Create([Bind(Include = "PersonID,FirstName,Surname,Email,PhoneNumber,HouseNameNumber,StreetName,Town,County,PostCode")] Person person)
+        public ActionResult Create([Bind(Include = "PersonID,FirstName,Surname,User,Email,PhoneNumber,HouseNameNumber,StreetName,Town,County,PostCode")] Person person)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace AGstudios.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Edit([Bind(Include = "PersonID,FirstName,Surname,Email,PhoneNumber,HouseNameNumber,StreetName,Town,County,PostCode")] Person person)
+        public ActionResult Edit([Bind(Include = "PersonID,FirstName,Surname,User,Email,PhoneNumber,HouseNameNumber,StreetName,Town,County,PostCode")] Person person)
         {
             if (ModelState.IsValid)
             {

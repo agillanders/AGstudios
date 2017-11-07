@@ -151,7 +151,7 @@ namespace AGstudios.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public ActionResult Register()
         {
             List<SelectListItem> list = new List<SelectListItem>();
@@ -164,8 +164,8 @@ namespace AGstudios.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
@@ -185,6 +185,10 @@ namespace AGstudios.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
+                List<SelectListItem> list = new List<SelectListItem>();
+                foreach (var role in RoleManager.Roles)
+                    list.Add(new SelectListItem() { Value = role.Name, Text = role.Name });
+                ViewBag.Roles = list;
                 AddErrors(result);
             }
 

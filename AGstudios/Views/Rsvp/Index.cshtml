@@ -3,40 +3,53 @@
     ViewBag.Title = "Index";
 }
 
-<div class="d-row voffset4" ng-app="myApp" ng-controller="mainCtrl">
+<div class="d-row voffset4" ng-app="MyApp" ng-controller="MainCtrl">
     <div class="d-column">
         <div class="container voffset4">
             <div class="rsvp-box">
                 <h1>RSVP</h1>
                 @if (User.IsInRole("Admin"))
                 {
-                    <form id="registrar">
-                        <div class="search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="input" placeholder="Add Invite..." ng-model="name">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-ok"></i></button>
-                                </span>
-                            </div><!-- /input-group -->
-                        </div>
-                    </form>
+                    <div class="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input" placeholder="Add Invitee..." ng-model="name">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-ok"></i></button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div>
                 }
             </div>
             <div class="rsvp-display">
-                <ul id="invitedList">
-                    <li>{{name}}</li>
-                </ul>
+                <h2>Invitees</h2>
+                <div class="d-row">
+                    <div ng-repeat="p in person">
+                        <div class="d-column">
+                            <div class="invited">
+                                <h3 class="text-muted">
+                                    {{p.FirstName}}
+                                    <i class="user glyphicon glyphicon-user pull-right"></i>
+                                </h3>
+                                <hr class="colorgraph" />
+                                <div class="confirm">
+                                    <label ng-show="p.expanded" class="text-success">Confirmed</label>
+                                    <label ng-show="!p.expanded" class="text-danger">Confirm</label>
+                                    <button type="button" class="btn btn-primary btn-xs" ng-click="p.expanded = !p.expanded" aria-hidden="true">
+                                        <i ng-show="p.expanded" class="glyphicon glyphicon-ok"></i>
+                                        <i ng-show="!p.expanded" class="glyphicon glyphicon-remove"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{name}}
             </div>
         </div>
     </div>
 </div>
 
 @section Scripts {
-<script src="~/Scripts/angular.min.js"></script>
-    <script>
-        var app = angular.module('myApp', []);
-        app.controller('mainCtrl', function ($scope) {
-            $scope.name = "";
-        });
-    </script>
+    <script src="~/Scripts/jquery-3.2.1.js"></script>
+    <script src="~/Scripts/People.js"></script>
 }

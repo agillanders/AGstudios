@@ -194,3 +194,9 @@ C:\AlecsProjects\AGStudios\AGstudios\obj\Debug\AGstudios.csproj.CoreCompileInput
 C:\AlecsProjects\AGStudios\AGstudios\obj\Debug\AGstudios.dll
 C:\AlecsProjects\AGStudios\AGstudios\obj\Debug\AGstudios.pdb
 C:\AlecsProjects\AGstudios\AGstudios\obj\Debug\AGstudios.csprojResolveAssemblyReference.cache
+C:\AlecsProjects\AGStudios\AGstudios\bin\System.Net.Http.Formatting.dll
+C:\AlecsProjects\AGStudios\AGstudios\bin\System.Web.Http.dll
+C:\AlecsProjects\AGStudios\AGstudios\bin\System.Web.Http.WebHost.dll
+C:\AlecsProjects\AGStudios\AGstudios\bin\System.Net.Http.Formatting.xml
+C:\AlecsProjects\AGStudios\AGstudios\bin\System.Web.Http.xml
+C:\AlecsProjects\AGStudios\AGstudios\bin\System.Web.Http.WebHost.xml

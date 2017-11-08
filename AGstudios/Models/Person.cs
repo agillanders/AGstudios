@@ -37,5 +37,7 @@ namespace AGstudios.Models
 
         [DisplayName("Post Code")]
         public string PostCode { get; set; }
+
+        public bool Confirmed { get; set; }
     }
 }

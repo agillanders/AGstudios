@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AGstudios.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,12 @@ namespace AGstudios.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult GetPeople()
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+            return Json(db.People.ToList(), JsonRequestBehavior.AllowGet);
         }
     }
 }

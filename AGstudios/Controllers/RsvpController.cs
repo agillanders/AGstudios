@@ -9,6 +9,7 @@ namespace AGstudios.Controllers
 {
     public class RsvpController : Controller
     {
+        ApplicationDbContext db = new ApplicationDbContext();
         // GET: Rsvp
         [Authorize(Roles = "User, Admin")]
         public ActionResult Index()
@@ -18,8 +19,15 @@ namespace AGstudios.Controllers
 
         public ActionResult GetPeople()
         {
-            ApplicationDbContext db = new ApplicationDbContext();
+            
             return Json(db.People.ToList(), JsonRequestBehavior.AllowGet);
         }
+
+        //[HttpPost]
+        //public void Confirmed(Person person)
+        //{
+        //    db.People.Add(person);
+        //    db.SaveChanges();
+        //}
     }
 }

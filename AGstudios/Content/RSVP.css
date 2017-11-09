@@ -51,6 +51,7 @@
     padding: 0 20px 20px;
     border: 1px solid #b3cce2;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(100, 100, 100, 0.3);
 }
 
 .confirm {

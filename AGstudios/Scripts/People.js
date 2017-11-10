@@ -17,8 +17,7 @@ app.controller('MainCtrl', ['$scope', '$http', '$window',
                 .then(function (response) {
                     //alert("Saved!");
                 });
-        }
-        
+        }        
     }
 ]);
 

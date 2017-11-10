@@ -15,7 +15,12 @@
             <div class="rsvp-display">
                 <div class="inviteesTitle">
                     <h2 class="text-muted">Invitees</h2>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <span class="btn btn-primary glyphicon glyphicon-refresh"></span>
+                    }
                     <h4 class="pull-right text-muted">Total Confirmed<i>{{(person | filter:Confirmed === fasle).length}}</i></h4>
+                    <h4 class="pull-right text-muted">Total Invited<i>{{(person | filter:Confirmed).length}}</i></h4>
                 </div>
                 
                 @if(ViewBag.ErrorMessage != null)

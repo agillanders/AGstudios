@@ -21,7 +21,11 @@
                 }
             </div>
             <div class="rsvp-display">
-                <h2 class="text-muted">Invitees</h2>
+                <div class="inviteesTitle">
+                    <h2 class="text-muted">Invitees</h2>
+                    <h4 class="pull-right text-muted">Total Confirmed<i>{{(person | filter:Confirmed === fasle).length}}</i></h4>
+                </div>
+                
                 @if(ViewBag.ErrorMessage != null)
                 {
                     <p class="alert alert-warning">@ViewBag.ErrorMessage</p>
@@ -39,7 +43,7 @@
                                     <form>
                                         <label ng-show="p.Confirmed" class="text-success">Confirmed</label>
                                         <label ng-show="!p.Confirmed" class="text-danger">Confirm</label>
-                                        <a class="btn btn-xs" ng-class="p.Confirmed ? 'btn-primary' : 'btn-default'" ng-click="confirm(p.PersonID, p.Confirmed = !p.Confirmed); p.Confirmed = !p.Confirmed" aria-hidden="true">
+                                        <a class="btn btn-xs" ng-class="p.Confirmed ? 'btn-primary' : 'btn-default'" ng-click="confirm(p.PersonID, p.Confirmed = !p.Confirmed); p.expanded = !p.expanded" aria-hidden="true">
                                             <i ng-show="p.Confirmed" class="glyphicon glyphicon-ok"></i>
                                             <i ng-show="!p.Confirmed" class="glyphicon glyphicon-remove"></i>
                                         </a>

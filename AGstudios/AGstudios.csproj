@@ -209,7 +209,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
-    <Compile Include="Controllers\RsvpAPIController.cs" />
     <Compile Include="Controllers\RsvpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

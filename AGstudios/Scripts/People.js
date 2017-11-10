@@ -9,10 +9,15 @@ app.controller('MainCtrl', ['$scope', '$http', '$window',
                 $scope.person = response.data
             });
 
-        $scope.confirm = function () {
-            $window.alert('Hello!');
-        }
+        $scope.confirm = function (id, confirmed) {
+            //alert(id);
+            var data = { PersonID: id, confirmed: confirmed };
 
-        $scope.confirm();
+            $http.post("/Rsvp/Confirmed", data)
+                .then(function (response) {
+                    //alert("Saved!");
+                });
+        }
     }
 ]);
+

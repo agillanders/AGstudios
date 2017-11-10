@@ -12,7 +12,7 @@
                 {
                     <div class="search">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="input" placeholder="Add Invitee..." ng-model="name">
+                            <input type="text" class="form-control" id="input" placeholder="Find Person..." ng-model="name">
                             <span class="input-group-btn">
                                 <button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-ok"></i></button>
                             </span>
@@ -22,6 +22,10 @@
             </div>
             <div class="rsvp-display">
                 <h2 class="text-muted">Invitees</h2>
+                @if(ViewBag.ErrorMessage != null)
+                {
+                    <p class="alert alert-warning">@ViewBag.ErrorMessage</p>
+                }
                 <div class="d-row">
                     <div ng-repeat="p in person">
                         <div class="d-column">
@@ -32,18 +36,19 @@
                                 </h3>
                                 <hr class="colorgraph" />
                                 <div class="confirm">
-                                    <label ng-show="p.expanded" class="text-success">Confirmed</label>
-                                    <label ng-show="!p.expanded" class="text-danger">Confirm</label>
-                                    <a class="btn btn-xs" ng-class="p.expanded ? 'btn-primary' : 'btn-default'" ng-click="confirm(); p.expanded = !p.expanded" aria-hidden="true">
-                                        <i ng-show="p.expanded" class="glyphicon glyphicon-ok"></i>
-                                        <i ng-show="!p.expanded" class="glyphicon glyphicon-remove"></i>
-                                    </a>
+                                    <form>
+                                        <label ng-show="p.Confirmed" class="text-success">Confirmed</label>
+                                        <label ng-show="!p.Confirmed" class="text-danger">Confirm</label>
+                                        <a class="btn btn-xs" ng-class="p.Confirmed ? 'btn-primary' : 'btn-default'" ng-click="confirm(p.PersonID, p.Confirmed = !p.Confirmed); p.Confirmed = !p.Confirmed" aria-hidden="true">
+                                            <i ng-show="p.Confirmed" class="glyphicon glyphicon-ok"></i>
+                                            <i ng-show="!p.Confirmed" class="glyphicon glyphicon-remove"></i>
+                                        </a>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {{name}}
             </div>
         </div>
     </div>

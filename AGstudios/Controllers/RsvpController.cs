@@ -38,7 +38,11 @@ namespace AGstudios.Controllers
                 ViewBag.ErrorMessage = "Error, you have not confirmed!";
             }
         }
-
         
+        [HttpPost]
+        public ActionResult Reset(List<Person> person)
+        {
+            return View("Index");
+        }
     }
 }

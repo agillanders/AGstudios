@@ -9,24 +9,31 @@
             <div class="rsvp-box">
                 <h1>RSVP</h1>
                 <div class="search">
-                    <input type="text"  ng-model="search.FirstName" class="form-control input-lg" placeholder="Find yourself...">    
+                    <input type="text" ng-model="search.FirstName" class="form-control input-lg" placeholder="Find yourself...">
                 </div>
             </div>
             <div class="rsvp-display">
                 <div class="inviteesTitle">
                     <h2 class="text-muted">Invitees</h2>
-                    @if (User.IsInRole("Admin"))
-                    {
-                        <span class="btn btn-primary glyphicon glyphicon-refresh"></span>
-                    }
                     <h4 class="pull-right text-muted">Total Confirmed<i>{{(person | filter:Confirmed === fasle).length}}</i></h4>
                     <h4 class="pull-right text-muted">Total Invited<i>{{(person | filter:Confirmed).length}}</i></h4>
                 </div>
-                
-                @if(ViewBag.ErrorMessage != null)
-                {
-                    <p class="alert alert-warning">@ViewBag.ErrorMessage</p>
-                }
+
+                <div class="d-row">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <form class="invitees-reset">
+                            <p>Reset all invitees confirmation states.</p>
+                            <input ng-click="(reset($event))" class="btn btn-primary glyphicon glyphicon-refresh" />
+                        </form>
+                    }
+
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <p class="alert alert-warning">@ViewBag.ErrorMessage</p>
+                    }
+                </div>
+
                 <div class="d-row">
                     <div ng-repeat="p in person | filter:search:strict">
                         <div class="d-column">

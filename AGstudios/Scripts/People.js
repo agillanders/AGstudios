@@ -2,7 +2,6 @@
 
 app.controller('MainCtrl', ['$scope', '$http', '$window',
     function ($scope, $http, $window) {
-        $scope.name;
 
         $http.get("/Rsvp/GetPeople")
             .then(function (response) {
@@ -10,14 +9,22 @@ app.controller('MainCtrl', ['$scope', '$http', '$window',
             });
 
         $scope.confirm = function (id, confirmed) {
-            //alert(id);
             var data = { PersonID: id, confirmed: confirmed };
 
             $http.post("/Rsvp/Confirmed", data)
                 .then(function (response) {
                     //alert("Saved!");
                 });
-        }        
+        }
+
+        $scope.reset = function (clickevent) {
+            alert("it's working.");
+
+            //$http.post("/Rsvp/Reset", data)
+            //    .then(function (response) {
+            //        //alert("Saved!");
+            //    });
+        }
     }
 ]);
 

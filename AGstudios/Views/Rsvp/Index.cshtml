@@ -24,7 +24,7 @@
                     {
                         <form class="invitees-reset">
                             <p>Reset all invitees confirmation states.</p>
-                            <input ng-click="(reset($event))" class="btn btn-primary glyphicon glyphicon-refresh" />
+                            <a ng-click="(reset($event))" class="btn btn-primary glyphicon glyphicon-refresh" ></a>
                         </form>
                     }
 
@@ -33,7 +33,7 @@
                         <p class="alert alert-warning">@ViewBag.ErrorMessage</p>
                     }
                 </div>
-
+                
                 <div class="d-row">
                     <div ng-repeat="p in person | filter:search:strict">
                         <div class="d-column">

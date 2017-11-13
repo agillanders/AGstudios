@@ -17,14 +17,20 @@ app.controller('MainCtrl', ['$scope', '$http', '$window',
                 });
         }
 
-        $scope.reset = function (clickevent) {
-            alert("it's working.");
+        $scope.person;
 
-            //$http.post("/Rsvp/Reset", data)
-            //    .then(function (response) {
-            //        //alert("Saved!");
-            //    });
+        $scope.reset = function (clickevent) {
+            //alert("it's working.");
+            var data = $scope.person
+            $http.post("/Rsvp/Reset", data)
+                .then(function (response) {
+                    $scope.refresh();
+                });
         }
+
+        $scope.refresh = function () {
+            $window.location.reload();
+        };
     }
 ]);
 

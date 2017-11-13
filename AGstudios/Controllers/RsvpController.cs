@@ -40,9 +40,20 @@ namespace AGstudios.Controllers
         }
         
         [HttpPost]
-        public ActionResult Reset(List<Person> person)
+        public void Reset(List<Person> person)
         {
-            return View("Index");
+            if (person != null)
+            {
+                foreach (var p in person)
+                {
+                    var reset = db.People.FirstOrDefault(x => x.Confirmed == true && x.PersonID == p.PersonID);
+                    if (p.Confirmed == true)
+                    {
+                        reset.Confirmed = false;
+                    }
+                }
+                db.SaveChanges();
+            }
         }
     }
 }

@@ -54,6 +54,10 @@ namespace AGstudios.Controllers
                 }
                 db.SaveChanges();
             }
+            else
+            {
+                ViewBag.ErrorMessage = "Error, Invitees not deselected!";
+            }
         }
     }
 }

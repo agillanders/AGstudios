@@ -31,6 +31,7 @@ app.controller('MainCtrl', ['$scope', '$http', '$window',
         $scope.refresh = function () {
             $window.location.reload();
         };
+
     }
 ]);
 

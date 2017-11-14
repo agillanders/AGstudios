@@ -12,7 +12,7 @@
                     <input type="text" ng-model="search.FirstName" class="form-control input-lg" placeholder="Find yourself...">
                 </div>
             </div>
-            <div class="rsvp-display">
+            <div class="rsvp-display" ng-cloak>
                 <div class="inviteesTitle">
                     <h2 class="text-muted">Invitees</h2>
                     <h4 class="pull-right text-muted">Total Confirmed<i>{{(person | filter:Confirmed === fasle).length}}</i></h4>
